@@ -41,7 +41,7 @@ function searchMovies(event) {
 
   let input = document.querySelector('[type="search"]').value || ""
   let count = 0
-  for (let m in movies) {
+  for (let m of movies) {
     if (m.title.toUpperCase().indexOf(input.toUpperCase()) == -1) {
       document.querySelector(`#m${m.id}`).classList.add('d-none')
     }
